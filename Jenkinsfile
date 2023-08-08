@@ -2,9 +2,9 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build docker image') {
             steps {
-                echo 'Hello World'
+                sh 'docker build -t walestix/myapp .'
             }
         }
     }
